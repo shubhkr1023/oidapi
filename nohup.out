@@ -1855,3 +1855,129 @@ ImportError: No module named flask
     parsed_entry=[(i,bytes(j,encoding='utf-8'))for i,j in entry.items()]
                ^
 IndentationError: expected an indented block
+  File "ldapApi.py", line 88
+    parsed_entry=[(i,bytes(j,encoding='utf-8'))for i,j in entry.items()]
+               ^
+IndentationError: expected an indented block
+ * Serving Flask app "ldapApi" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://10.26.38.183:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 231-022-371
+10.25.131.29 - - [08/Oct/2020 07:48:04] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.131.29 - - [08/Oct/2020 07:48:26] "[37mGET /search?username=IdamDemo HTTP/1.1[0m" 200 -
+10.25.131.29 - - [08/Oct/2020 07:48:55] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.131.29 - - [08/Oct/2020 07:49:16] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.131.29 - - [08/Oct/2020 07:49:27] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.131.29 - - [08/Oct/2020 07:49:30] "[35m[1mGET /search?username=IdamDemo HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/ldapApi.py", line 227, in search
+    responseDict['accountstatus']= rDictDecoded.pop('orclisenabled')
+KeyError: 'orclisenabled'
+ * Detected change in '/home/oracle/testflask/code/ldapApi.py', reloading
+{'msgtype': 105, 'msgid': 3, 'result': 68, 'desc': 'Already exists', 'ctrls': [], 'info': 'Object already exists'}
+{'msgtype': 105, 'msgid': 8, 'result': 68, 'desc': 'Already exists', 'ctrls': [], 'info': 'Object already exists'}
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 231-022-371
+10.25.131.29 - - [08/Oct/2020 07:59:23] "[35m[1mGET /search?username=IdamDemo HTTP/1.1[0m" 500 -
+ * Serving Flask app "ldapApi" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://10.26.38.183:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 231-022-371
+10.25.131.29 - - [08/Oct/2020 08:00:21] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.131.29 - - [08/Oct/2020 08:00:25] "[35m[1mGET /search?username=IdamDemo HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/ldapApi.py", line 227, in search
+    responseDict['accountstatus']= rDictDecoded.pop('orclisenabled')
+KeyError: 'orclisenabled'
+ * Detected change in '/home/oracle/testflask/code/ldapApi.py', reloading
+{'msgtype': 105, 'msgid': 3, 'result': 68, 'desc': 'Already exists', 'ctrls': [], 'info': 'Object already exists'}
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 231-022-371
+10.25.131.29 - - [08/Oct/2020 08:01:53] "[37mGET /search?username=IdamDemo HTTP/1.1[0m" 200 -
+ * Detected change in '/home/oracle/testflask/code/ldapApi.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 231-022-371
+10.25.131.29 - - [08/Oct/2020 08:06:06] "[35m[1mGET /search?username=IdamDemo HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/ldapApi.py", line 228, in search
+    responseDict['accountstatus']= rDictDecoded.pop('orclisenabled')
+KeyError: 'orclisenabled'
+10.25.131.29 - - [08/Oct/2020 08:06:12] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.131.29 - - [08/Oct/2020 08:06:17] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.131.29 - - [08/Oct/2020 08:06:21] "[37mGET /search?username=IdamDemo HTTP/1.1[0m" 200 -
+10.25.131.29 - - [08/Oct/2020 08:06:48] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.131.29 - - [08/Oct/2020 08:06:51] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.131.29 - - [08/Oct/2020 08:06:56] "[37mGET /search?username=IdamDemo HTTP/1.1[0m" 200 -

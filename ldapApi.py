@@ -82,13 +82,13 @@ def create():
                    entry.update({"managerid":data['managerDomainId']})
                 if 'managerEmailId' in user_input:
                     entry.update({"manageremailid":data['managerEmailId']})
-                if 'managerDomainId' in user_input:
 
 
                 parsed_entry=[(i,bytes(j,encoding='utf-8'))for i,j in entry.items()]
                 parsed_entry.append(("objectClass",[b"inetOrgPerson",b"orclUserV2"]))
                 if 'accountstatus' in user_input:
-                  entry.update({"orclisenabled":data['accountstatus']})
+                  parsed_entry.append(("orclIsEnabled",bytes(data['accountstatus'], encoding='utf-8')))
+
                 else:
                   parsed_entry.append(("orclIsEnabled",b"ENABLED"))
                 con.add_s(dn,parsed_entry)
