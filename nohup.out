@@ -1,0 +1,1857 @@
+ * Serving Flask app "OidCode" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://10.26.38.183:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 317-199-723
+10.26.38.197 - - [07/Apr/2020 12:16:51] "[33mGET /search?fullname=f HTTP/1.1[0m" 404 -
+10.26.38.197 - - [07/Apr/2020 12:17:01] "[37mGET /search?fullname=test1.testSN1 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [08/Apr/2020 05:37:37] "[33mGET /search?fullname=s HTTP/1.1[0m" 404 -
+10.26.38.197 - - [08/Apr/2020 05:59:25] "[33mGET /search?fullname=shubhendu%20singh HTTP/1.1[0m" 404 -
+10.26.38.197 - - [08/Apr/2020 05:59:39] "[33mGET /search?fullname=shubhendu.singh HTTP/1.1[0m" 404 -
+10.26.38.197 - - [08/Apr/2020 05:59:54] "[33mGET /search?fullname=shubhendu HTTP/1.1[0m" 404 -
+10.26.38.197 - - [08/Apr/2020 06:00:28] "[37mGET /search?fullname=test1.testSN1 HTTP/1.1[0m" 200 -
+10.25.131.15 - - [08/Apr/2020 09:20:15] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [14/Apr/2020 06:20:56] "[33mGET /search?fullname=shubhendu HTTP/1.1[0m" 404 -
+10.26.38.197 - - [14/Apr/2020 06:25:00] "[33mGET /search?fullname=shubhendu HTTP/1.1[0m" 404 -
+10.26.38.197 - - [14/Apr/2020 06:28:43] "[35m[1mPOST /create HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/OidCode.py", line 23, in create
+    buFilter = "(&(objectClass=organizationalUnit)(ou=" + data['businessUnit']+ "))"
+TypeError: 'NoneType' object is not subscriptable
+10.26.38.197 - - [14/Apr/2020 06:30:20] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [14/Apr/2020 06:30:49] "[37mGET /search?fullname=test1.testSN1 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [14/Apr/2020 06:33:51] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.26.38.197 - - [14/Apr/2020 06:34:04] "[37mGET /search?fullname=test1.testSN1 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [14/Apr/2020 06:34:57] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.26.38.197 - - [14/Apr/2020 06:36:17] "[35m[1mPOST /delete HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/OidCode.py", line 116, in delete
+    filter = "(&(objectClass=*)(cn="+data['fullname']+"))"
+TypeError: 'NoneType' object is not subscriptable
+10.26.38.197 - - [14/Apr/2020 06:37:10] "[31m[1mPOST /delete HTTP/1.1[0m" 400 -
+10.26.38.197 - - [14/Apr/2020 06:37:23] "[33mGET /search?fullname=test1.testSN1 HTTP/1.1[0m" 404 -
+10.26.38.197 - - [14/Apr/2020 06:37:50] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [14/Apr/2020 06:37:57] "[37mGET /search?fullname=test1.testSN1 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [14/Apr/2020 06:39:07] "[35m[1mPOST /updatepassword HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/OidCode.py", line 337, in updatepassword
+    filter = "(&(objectClass=*)(cn="+data['fullname']+"))"
+TypeError: 'NoneType' object is not subscriptable
+10.26.38.197 - - [14/Apr/2020 06:40:25] "[35m[1mPOST /updatepassword HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/OidCode.py", line 337, in updatepassword
+    filter = "(&(objectClass=*)(cn="+data['fullname']+"))"
+TypeError: 'NoneType' object is not subscriptable
+10.26.38.197 - - [14/Apr/2020 06:40:45] "[37mPOST /updatepassword HTTP/1.1[0m" 200 -
+10.26.38.197 - - [14/Apr/2020 06:41:32] "[35m[1mPOST /updateuser HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/OidCode.py", line 241, in update
+    filter = "(&(objectClass=*)(cn="+data['fullname']+"))"
+TypeError: 'NoneType' object is not subscriptable
+10.26.38.197 - - [14/Apr/2020 06:42:22] "[37mPOST /updateuser HTTP/1.1[0m" 200 -
+10.26.38.197 - - [14/Apr/2020 06:42:29] "[37mGET /search?fullname=test1.testSN1 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [14/Apr/2020 06:57:31] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [14/Apr/2020 06:57:53] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [14/Apr/2020 06:59:48] "[37mGET /search?fullname=test2.testSN2 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [14/Apr/2020 07:11:28] "[37mGET /search?fullname=test2.testSN2 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [14/Apr/2020 07:11:39] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [14/Apr/2020 07:12:57] "[35m[1mPOST /create HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/OidCode.py", line 23, in create
+    buFilter = "(&(objectClass=organizationalUnit)(ou=" + data['businessUnit']+ "))"
+TypeError: 'NoneType' object is not subscriptable
+10.26.38.197 - - [14/Apr/2020 07:17:03] "[35m[1mPOST /create HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/OidCode.py", line 23, in create
+    buFilter = "(&(objectClass=organizationalUnit)(ou=" + data['businessUnit']+ "))"
+TypeError: 'NoneType' object is not subscriptable
+10.26.38.197 - - [14/Apr/2020 07:20:26] "[37mGET /search?fullname=test2.testSN2 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [14/Apr/2020 07:23:30] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [14/Apr/2020 07:23:59] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [14/Apr/2020 07:26:39] "[35m[1mPOST /create HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/OidCode.py", line 23, in create
+    buFilter = "(&(objectClass=organizationalUnit)(ou=" + data['businessUnit']+ "))"
+TypeError: 'NoneType' object is not subscriptable
+10.26.38.197 - - [14/Apr/2020 07:27:55] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [14/Apr/2020 07:31:54] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [14/Apr/2020 07:34:12] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [14/Apr/2020 07:37:03] "[33mHEAD / HTTP/1.1[0m" 404 -
+10.26.38.197 - - [14/Apr/2020 07:37:49] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.26.38.197 - - [14/Apr/2020 07:38:12] "[33mGET /search?fullname=test1.testSN1 HTTP/1.1[0m" 404 -
+10.26.61.50 - - [14/Apr/2020 08:10:56] code 400, message Bad request syntax ('ÿôÿý\x06ÿíÿý\x06ÿôÿý\x06ÿíÿý\x06ÿíÿý\x06')
+10.26.61.50 - - [14/Apr/2020 08:10:56] "[35m[1mÿôÿýÿíÿýÿôÿýÿíÿýÿíÿý[0m" HTTPStatus.BAD_REQUEST -
+10.26.38.197 - - [14/Apr/2020 09:38:41] "[33mPOST /updatepassword HTTP/1.1[0m" 404 -
+10.26.38.197 - - [14/Apr/2020 09:39:06] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [14/Apr/2020 09:39:16] "[37mPOST /updatepassword HTTP/1.1[0m" 200 -
+Traceback (most recent call last):
+  File "central6.py", line 1, in <module>
+    from flask import Flask,request,Response,json
+ImportError: No module named flask
+ * Serving Flask app "central6" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://10.26.38.183:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 317-199-723
+10.26.38.197 - - [11/May/2020 07:53:57] "[33mHEAD / HTTP/1.1[0m" 404 -
+10.26.38.197 - - [11/May/2020 07:57:15] "[33mGET /search?username=t HTTP/1.1[0m" 404 -
+10.26.38.197 - - [11/May/2020 08:04:01] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [11/May/2020 08:06:31] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [11/May/2020 08:08:05] "[33mGET /search?fullname=f HTTP/1.1[0m" 404 -
+10.26.38.197 - - [11/May/2020 08:08:39] "[35m[1mPOST /create HTTP/1.1[0m" 500 -
+ * Serving Flask app "central6" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://10.26.38.183:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 317-199-723
+10.26.38.197 - - [20/May/2020 05:46:28] "[37mGET /search?username=test1.testSN1 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [20/May/2020 05:48:52] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [20/May/2020 05:49:40] "[31m[1mPOST /delete HTTP/1.1[0m" 400 -
+10.26.38.197 - - [20/May/2020 05:50:04] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.26.38.197 - - [20/May/2020 05:50:32] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [20/May/2020 05:51:27] "[37mPOST /updateuser HTTP/1.1[0m" 200 -
+10.26.38.197 - - [21/May/2020 11:27:35] "[33mGET /search?username=h HTTP/1.1[0m" 404 -
+10.26.38.197 - - [21/May/2020 11:35:48] "[33mGET /search?username=h HTTP/1.1[0m" 404 -
+10.26.38.197 - - [21/May/2020 11:54:04] "[33mGET /search?username=df HTTP/1.1[0m" 404 -
+10.26.38.197 - - [21/May/2020 12:02:23] "[35m[1mPOST /create HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central6.py", line 21, in create
+    buFilter = "(&(objectClass=organizationalUnit)(ou=" + data['role']+ "))"
+KeyError: 'role'
+10.26.38.197 - - [21/May/2020 12:03:08] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [21/May/2020 12:03:39] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.26.38.197 - - [21/May/2020 12:03:54] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [21/May/2020 12:04:10] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.26.38.197 - - [21/May/2020 12:07:11] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [21/May/2020 12:25:49] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [21/May/2020 13:03:26] "[31m[1mPOST /delete HTTP/1.1[0m" 400 -
+10.26.38.197 - - [21/May/2020 13:06:24] "[37mGET /search?username=0016667777 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [21/May/2020 13:18:10] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [21/May/2020 13:18:27] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [21/May/2020 13:19:38] "[37mGET /search?username=VGSARAFS HTTP/1.1[0m" 200 -
+10.26.38.197 - - [21/May/2020 13:24:13] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [21/May/2020 13:25:03] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [21/May/2020 13:25:14] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [21/May/2020 13:25:23] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [21/May/2020 13:25:29] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [21/May/2020 13:25:38] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [21/May/2020 13:25:49] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [21/May/2020 13:26:04] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [21/May/2020 13:26:46] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [21/May/2020 13:26:59] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [21/May/2020 13:32:45] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.26.38.197 - - [21/May/2020 13:33:02] "[33mGET /search?username=VGSARAFS HTTP/1.1[0m" 404 -
+10.26.38.197 - - [21/May/2020 13:40:33] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [21/May/2020 13:43:24] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [21/May/2020 13:44:03] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [21/May/2020 13:44:36] "[37mPOST /updatepassword HTTP/1.1[0m" 200 -
+10.26.38.197 - - [26/May/2020 14:14:36] "[31m[1mGET /search?username=ff HTTP/1.1[0m" 400 -
+ * Serving Flask app "central7" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+Traceback (most recent call last):
+  File "central7.py", line 511, in <module>
+    app.run(host='10.26.38.183',debug=True)
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/flask/app.py", line 990, in run
+    run_simple(host, port, self, **options)
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/werkzeug/serving.py", line 1030, in run_simple
+    s.bind(server_address)
+OSError: [Errno 98] Address already in use
+ * Serving Flask app "central7" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://10.26.38.183:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 317-199-723
+Fatal Python error: saving thread twice?
+
+Current thread 0x00007f1ed2560700 (most recent call first):
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/ldap/ldapobject.py", line 315 in _ldap_call
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/ldap/ldapobject.py", line 439 in simple_bind
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/ldap/ldapobject.py", line 445 in simple_bind_s
+  File "/home/oracle/testflask/code/central7.py", line 165 in search
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/flask/app.py", line 1936 in dispatch_request
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/flask/app.py", line 1950 in full_dispatch_request
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/flask/app.py", line 2447 in wsgi_app
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/flask/app.py", line 2464 in __call__
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/werkzeug/debug/__init__.py", line 304 in debug_application
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/werkzeug/serving.py", line 314 in execute
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/werkzeug/serving.py", line 323 in run_wsgi
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/werkzeug/serving.py", line 379 in handle_one_request
+  File "/usr/lib64/python3.6/http/server.py", line 418 in handle
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/werkzeug/serving.py", line 345 in handle
+  File "/usr/lib64/python3.6/socketserver.py", line 724 in __init__
+  File "/usr/lib64/python3.6/socketserver.py", line 364 in finish_request
+  File "/usr/lib64/python3.6/socketserver.py", line 654 in process_request_thread
+  File "/usr/lib64/python3.6/threading.py", line 864 in run
+  File "/usr/lib64/python3.6/threading.py", line 916 in _bootstrap_inner
+  File "/usr/lib64/python3.6/threading.py", line 884 in _bootstrap
+
+Thread 0x00007f1ed2d61700 (most recent call first):
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/ldap/ldapobject.py", line 315 in _ldap_call
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/ldap/ldapobject.py", line 439 in simple_bind
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/ldap/ldapobject.py", line 445 in simple_bind_s
+  File "/home/oracle/testflask/code/central7.py", line 165 in search
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/flask/app.py", line 1936 in dispatch_request
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/flask/app.py", line 1950 in full_dispatch_request
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/flask/app.py", line 2447 in wsgi_app
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/flask/app.py", line 2464 in __call__
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/werkzeug/debug/__init__.py", line 304 in debug_application
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/werkzeug/serving.py", line 314 in execute
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/werkzeug/serving.py", line 323 in run_wsgi
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/werkzeug/serving.py", line 379 in handle_one_request
+  File "/usr/lib64/python3.6/http/server.py", line 418 in handle
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/werkzeug/serving.py", line 345 in handle
+  File "/usr/lib64/python3.6/socketserver.py", line 724 in __init__
+  File "/usr/lib64/python3.6/socketserver.py", line 364 in finish_request
+  File "/usr/lib64/python3.6/socketserver.py", line 654 in process_request_thread
+  File "/usr/lib64/python3.6/threading.py", line 864 in run
+  File "/usr/lib64/python3.6/threading.py", line 916 in _bootstrap_inner
+  File "/usr/lib64/python3.6/threading.py", line 884 in _bootstrap
+
+Thread 0x00007f1ed35a2700 (most recent call first):
+  File "/usr/lib64/python3.6/selectors.py", line 376 in select
+  File "/usr/lib64/python3.6/socketserver.py", line 236 in serve_forever
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/werkzeug/serving.py", line 777 in serve_forever
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/werkzeug/serving.py", line 1009 in inner
+  File "/usr/lib64/python3.6/threading.py", line 864 in run
+  File "/usr/lib64/python3.6/threading.py", line 916 in _bootstrap_inner
+  File "/usr/lib64/python3.6/threading.py", line 884 in _bootstrap
+
+Thread 0x00007f1ee45c3740 (most recent call first):
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/werkzeug/_reloader.py", line 214 in run
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/werkzeug/_reloader.py", line 337 in run_with_reloader
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/werkzeug/serving.py", line 1050 in run_simple
+  File "/home/oracle/testflask/lib64/python3.6/site-packages/flask/app.py", line 990 in run
+  File "/home/oracle/testflask/code/central7.py", line 511 in <module>
+ * Serving Flask app "central6" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://10.26.38.183:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 317-199-723
+10.26.38.197 - - [04/Jun/2020 09:55:24] "[35m[1mGET /search?username=VGSARAFS65t HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central6.py", line 205, in search
+    responseDict['oragnization']= rDictDecoded.pop('o')
+KeyError: 'o'
+10.26.38.197 - - [04/Jun/2020 09:55:59] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [04/Jun/2020 09:57:20] "[33mGET /listuser?role=Customer HTTP/1.1[0m" 404 -
+ * Serving Flask app "central7" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://10.26.38.183:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 317-199-723
+ * Detected change in '/home/oracle/testflask/code/central7.py', reloading
+ * Restarting with stat
+  File "/home/oracle/testflask/code/central7.py", line 5
+    con =ldap.initialize('ldap://10.26.38.183:3060'))
+                                                    ^
+SyntaxError: invalid syntax
+ * Serving Flask app "central7" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://10.26.38.183:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 317-199-723
+10.26.38.197 - - [04/Jun/2020 10:00:14] "[35m[1mGET /listuser?role=Customer HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central7.py", line 482, in listuser
+    rTemp['role']= rDictDecoded.pop('description')
+KeyError: 'description'
+10.26.38.197 - - [04/Jun/2020 10:01:24] "[35m[1mGET /search?username=VGSARAFS65t HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central7.py", line 208, in search
+    responseDict['oragnization']= rDictDecoded.pop('o')
+KeyError: 'o'
+10.26.38.197 - - [04/Jun/2020 10:02:52] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [04/Jun/2020 10:03:49] "[35m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central7.py", line 211, in search
+    responseDict['fullname']= rDictDecoded.pop('title')
+KeyError: 'title'
+10.26.38.197 - - [04/Jun/2020 10:06:57] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.26.38.197 - - [04/Jun/2020 10:07:06] "[33mGET /search?username=test24.testSN24 HTTP/1.1[0m" 404 -
+10.26.38.197 - - [04/Jun/2020 10:07:26] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [04/Jun/2020 10:07:55] "[37mGET /search?username=test24.testSN24 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [04/Jun/2020 10:08:37] "[37mPOST /updateuser HTTP/1.1[0m" 200 -
+10.26.38.197 - - [04/Jun/2020 10:08:47] "[37mGET /search?username=test24.testSN24 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [04/Jun/2020 10:09:00] "[35m[1mGET /listuser?role=Customer HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central7.py", line 482, in listuser
+    rTemp['role']= rDictDecoded.pop('description')
+KeyError: 'description'
+10.26.38.197 - - [04/Jun/2020 10:11:22] "[37mGET /listuser?role=Customer HTTP/1.1[0m" 200 -
+10.26.38.197 - - [04/Jun/2020 10:13:23] "[31m[1mPOST /activate HTTP/1.1[0m" 400 -
+10.26.38.197 - - [04/Jun/2020 10:13:55] "[33mPOST /activate HTTP/1.1[0m" 404 -
+10.26.38.197 - - [04/Jun/2020 10:14:07] "[35m[1mPOST /activate HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central7.py", line 435, in activate
+    entry={"orclIsEnabled":data['status']}
+KeyError: 'status'
+ * Detected change in '/home/oracle/testflask/code/central7.py', reloading
+{'desc': 'Already exists', 'info': 'Object already exists'}
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 317-199-723
+10.26.38.197 - - [04/Jun/2020 10:15:48] "[35m[1mPOST /activate HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central7.py", line 435, in activate
+    entry={"orclIsEnabled":data['status']}
+KeyError: 'status'
+ * Detected change in '/home/oracle/testflask/code/central7.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 317-199-723
+10.26.38.197 - - [04/Jun/2020 10:16:39] "[37mPOST /activate HTTP/1.1[0m" 200 -
+10.26.38.197 - - [04/Jun/2020 10:18:28] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [04/Jun/2020 10:18:38] "[37mGET /listuser?role=Customer HTTP/1.1[0m" 200 -
+10.26.38.197 - - [04/Jun/2020 10:18:46] "[33mGET /listuser?role=Agent HTTP/1.1[0m" 404 -
+10.26.38.197 - - [04/Jun/2020 10:19:03] "[33mGET /listuser?role=Vendor HTTP/1.1[0m" 404 -
+10.26.38.197 - - [04/Jun/2020 10:28:54] "[37mGET /listuser?role=Customer HTTP/1.1[0m" 200 -
+10.26.38.197 - - [04/Jun/2020 10:29:36] "[37mGET /search?username=test24.testSN24 HTTP/1.1[0m" 200 -
+ * Detected change in '/home/oracle/testflask/code/central7.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 317-199-723
+10.26.38.197 - - [09/Jun/2020 07:48:05] "[37mGET /search?username=test24.testSN24 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [09/Jun/2020 07:48:38] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.26.38.197 - - [09/Jun/2020 07:49:03] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [09/Jun/2020 07:49:27] "[37mPOST /updateuser HTTP/1.1[0m" 200 -
+10.26.38.197 - - [09/Jun/2020 07:49:41] "[37mGET /listuser?role=Customer HTTP/1.1[0m" 200 -
+10.26.38.197 - - [09/Jun/2020 07:51:56] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [09/Jun/2020 07:52:07] "[37mGET /listuser?role=Customer HTTP/1.1[0m" 200 -
+10.26.38.197 - - [09/Jun/2020 08:15:38] "[33mGET /search?username=VGSARAFS HTTP/1.1[0m" 404 -
+10.26.38.197 - - [09/Jun/2020 08:21:10] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [09/Jun/2020 08:21:58] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [09/Jun/2020 08:23:39] "[37mGET /search?username=20000007778 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [09/Jun/2020 08:25:27] "[31m[1mPOST /updateuser HTTP/1.1[0m" 400 -
+10.26.38.197 - - [09/Jun/2020 08:27:36] "[31m[1mPOST /updateuser HTTP/1.1[0m" 400 -
+10.26.38.197 - - [09/Jun/2020 08:27:49] "[31m[1mPOST /updateuser HTTP/1.1[0m" 400 -
+10.26.38.197 - - [09/Jun/2020 08:28:06] "[37mPOST /updateuser HTTP/1.1[0m" 200 -
+10.26.38.197 - - [09/Jun/2020 08:28:47] "[37mGET /search?username=20000007778 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [09/Jun/2020 08:31:01] "[37mGET /listuser?role=Customer HTTP/1.1[0m" 200 -
+10.26.38.197 - - [09/Jun/2020 08:31:20] "[33mGET /listuser?role=Vendor HTTP/1.1[0m" 404 -
+10.26.38.197 - - [09/Jun/2020 08:31:52] "[33mGET /listuser?role=Vendor HTTP/1.1[0m" 404 -
+10.26.38.197 - - [09/Jun/2020 08:32:03] "[33mGET /listuser?role=Employee HTTP/1.1[0m" 404 -
+10.26.38.197 - - [09/Jun/2020 08:32:11] "[37mGET /listuser?role=Customer HTTP/1.1[0m" 200 -
+10.26.38.197 - - [09/Jun/2020 08:32:18] "[33mGET /listuser?role=BGUSER HTTP/1.1[0m" 404 -
+10.26.38.197 - - [09/Jun/2020 08:32:52] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [09/Jun/2020 08:32:58] "[33mGET /listuser?role=BGUSER HTTP/1.1[0m" 404 -
+10.26.38.197 - - [09/Jun/2020 08:33:05] "[37mGET /listuser?role=Vendor HTTP/1.1[0m" 200 -
+10.26.38.197 - - [09/Jun/2020 08:40:47] "[31m[1mGET /listuser HTTP/1.1[0m" 400 -
+10.26.38.197 - - [09/Jun/2020 08:41:12] "[37mPOST /updatepassword HTTP/1.1[0m" 200 -
+10.26.38.197 - - [09/Jun/2020 08:41:25] "[37mPOST /updatepassword HTTP/1.1[0m" 200 -
+10.26.38.197 - - [09/Jun/2020 08:43:29] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [09/Jun/2020 08:48:20] "[37mPOST /updateuser HTTP/1.1[0m" 200 -
+10.26.38.197 - - [09/Jun/2020 08:48:38] "[33mGET /search?username=2000000777789 HTTP/1.1[0m" 404 -
+10.26.38.197 - - [09/Jun/2020 08:48:56] "[37mGET /search?username=20000007777 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [10/Jun/2020 06:55:58] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [10/Jun/2020 06:56:15] "[37mGET /search?username=%20testuser%40demo.com HTTP/1.1[0m" 200 -
+ * Detected change in '/home/oracle/testflask/code/phoneverify.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 317-199-723
+10.26.38.197 - - [15/Jun/2020 07:58:53] "[37mGET /search?username=test24.testSN24 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [15/Jun/2020 08:00:01] "[37mGET /search?username=test24.testSN24 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [15/Jun/2020 08:05:01] "[35m[1mPOST /create HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central7.py", line 21, in create
+    buFilter = "(&(objectClass=organizationalUnit)(ou=" + data['role']+ "))"
+KeyError: 'role'
+10.26.38.197 - - [15/Jun/2020 08:09:17] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [15/Jun/2020 08:12:21] "[37mGET /listuser?role=Agent HTTP/1.1[0m" 200 -
+10.26.38.197 - - [15/Jun/2020 08:13:01] "[37mGET /listuser?role=Customer HTTP/1.1[0m" 200 -
+10.26.38.197 - - [15/Jun/2020 08:23:27] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.10 - - [18/Jun/2020 05:56:32] code 400, message Bad request syntax ('\x03\x03\x1a\x1a\x1aexit')
+10.25.130.10 - - [18/Jun/2020 05:56:32] "[35m[1mexit[0m" HTTPStatus.BAD_REQUEST -
+10.25.130.10 - - [18/Jun/2020 06:09:56] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.10 - - [18/Jun/2020 06:11:04] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.10 - - [18/Jun/2020 06:16:03] "[37mGET /search?username=test25.testSN25 HTTP/1.1[0m" 200 -
+10.25.130.10 - - [18/Jun/2020 06:17:46] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.130.10 - - [18/Jun/2020 06:23:47] "[37mGET /listuser?role=Customer HTTP/1.1[0m" 200 -
+10.25.130.10 - - [18/Jun/2020 06:34:39] "[37mGET /search?username=test25.testSN25 HTTP/1.1[0m" 200 -
+10.25.130.10 - - [18/Jun/2020 06:34:44] "[31m[1mPOST /delete HTTP/1.1[0m" 400 -
+10.25.130.10 - - [18/Jun/2020 06:35:17] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.10 - - [18/Jun/2020 06:35:32] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.130.10 - - [18/Jun/2020 06:35:37] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.130.10 - - [18/Jun/2020 06:35:40] "[37mGET /search?username=test25.testSN25 HTTP/1.1[0m" 200 -
+10.25.130.10 - - [18/Jun/2020 06:35:55] "[37mPOST /updatepassword HTTP/1.1[0m" 200 -
+10.25.130.10 - - [18/Jun/2020 06:36:07] "[37mPOST /activate HTTP/1.1[0m" 200 -
+10.25.130.10 - - [18/Jun/2020 06:47:57] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.10 - - [18/Jun/2020 06:48:17] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.130.10 - - [18/Jun/2020 06:48:24] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.130.10 - - [18/Jun/2020 06:48:51] "[37mGET /search?username=test25.testSN25 HTTP/1.1[0m" 200 -
+10.25.130.10 - - [18/Jun/2020 06:48:56] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.130.10 - - [18/Jun/2020 06:48:59] "[33mGET /search?username=test25.testSN25 HTTP/1.1[0m" 404 -
+10.25.130.10 - - [18/Jun/2020 06:49:15] "[33mPOST /updatepassword HTTP/1.1[0m" 404 -
+10.25.130.10 - - [18/Jun/2020 06:49:27] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.130.10 - - [18/Jun/2020 06:49:32] "[37mPOST /updatepassword HTTP/1.1[0m" 200 -
+10.25.130.10 - - [18/Jun/2020 06:50:05] "[37mGET /search?username=test25.testSN25 HTTP/1.1[0m" 200 -
+10.25.130.10 - - [18/Jun/2020 06:50:09] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.130.10 - - [18/Jun/2020 06:50:14] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.130.10 - - [18/Jun/2020 06:50:19] "[37mGET /search?username=test25.testSN25 HTTP/1.1[0m" 200 -
+10.25.134.200 - - [19/Jun/2020 06:43:09] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.134.200 - - [19/Jun/2020 06:43:15] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.134.200 - - [19/Jun/2020 07:10:02] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.134.200 - - [19/Jun/2020 07:10:11] "[37mGET /search?username=test25.testSN25 HTTP/1.1[0m" 200 -
+10.25.134.200 - - [19/Jun/2020 07:10:40] "[37mPOST /updateuser HTTP/1.1[0m" 200 -
+10.25.134.200 - - [19/Jun/2020 07:12:00] "[37mGET /listuser?role=Customer HTTP/1.1[0m" 200 -
+10.25.134.200 - - [19/Jun/2020 07:12:35] "[37mPOST /activate HTTP/1.1[0m" 200 -
+10.25.134.200 - - [19/Jun/2020 07:12:44] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.134.200 - - [19/Jun/2020 07:12:52] "[33mGET /search?username=test25.testSN25 HTTP/1.1[0m" 404 -
+10.25.134.200 - - [19/Jun/2020 07:13:25] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.134.200 - - [19/Jun/2020 07:13:38] "[37mPOST /updatepassword HTTP/1.1[0m" 200 -
+10.25.134.200 - - [19/Jun/2020 07:13:47] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.134.200 - - [19/Jun/2020 07:13:59] "[33mPOST /activate HTTP/1.1[0m" 404 -
+10.25.134.200 - - [19/Jun/2020 07:14:07] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.134.200 - - [19/Jun/2020 07:14:11] "[37mPOST /activate HTTP/1.1[0m" 200 -
+10.25.134.200 - - [19/Jun/2020 07:14:20] "[31m[1mPOST /updatepassword HTTP/1.1[0m" 400 -
+10.25.134.200 - - [19/Jun/2020 07:14:33] "[37mGET /search?username=test25.testSN25 HTTP/1.1[0m" 200 -
+10.25.134.200 - - [19/Jun/2020 07:15:38] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.134.200 - - [19/Jun/2020 07:15:43] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.134.200 - - [19/Jun/2020 07:16:04] "[37mGET /search?username=test25.testSN25 HTTP/1.1[0m" 200 -
+10.25.134.200 - - [19/Jun/2020 07:16:25] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.134.200 - - [19/Jun/2020 07:16:36] "[33mGET /search?username=test25.testSN25 HTTP/1.1[0m" 404 -
+10.25.134.200 - - [19/Jun/2020 07:16:47] "[33mPOST /updatepassword HTTP/1.1[0m" 404 -
+10.25.134.200 - - [19/Jun/2020 07:17:05] "[31m[1mPOST /updateuser HTTP/1.1[0m" 400 -
+10.25.134.200 - - [19/Jun/2020 07:17:17] "[33mPOST /activate HTTP/1.1[0m" 404 -
+10.25.134.200 - - [19/Jun/2020 07:17:33] "[37mGET /listuser?role=Agent HTTP/1.1[0m" 200 -
+10.25.134.200 - - [19/Jun/2020 07:17:45] "[33mGET /listuser?role=BGUSER HTTP/1.1[0m" 404 -
+10.25.134.200 - - [19/Jun/2020 07:18:28] "[35m[1mGET /listuser?role=IRM HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central7.py", line 483, in listuser
+    rTemp['platform']= rDictDecoded.pop('employeetype')
+KeyError: 'employeetype'
+10.25.134.200 - - [19/Jun/2020 07:22:34] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.134.200 - - [19/Jun/2020 07:23:53] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.134.200 - - [19/Jun/2020 07:25:14] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.134.200 - - [19/Jun/2020 07:25:20] "[31m[1mGET /listuser?role=IRM HTTP/1.1[0m" 400 -
+10.25.134.200 - - [19/Jun/2020 07:25:33] "[37mGET /listuser?role=BGUSER HTTP/1.1[0m" 200 -
+10.25.134.200 - - [19/Jun/2020 07:25:42] "[37mGET /listuser?role=Contractor HTTP/1.1[0m" 200 -
+10.25.134.200 - - [19/Jun/2020 07:25:55] "[33mGET /listuser?role=Employee HTTP/1.1[0m" 404 -
+10.25.134.200 - - [19/Jun/2020 07:27:35] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.134.200 - - [19/Jun/2020 07:27:41] "[37mGET /listuser?role=Employee HTTP/1.1[0m" 200 -
+10.25.134.200 - - [19/Jun/2020 08:39:33] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.134.200 - - [19/Jun/2020 08:40:02] "[33mGET /search?username=test25.testSN25 HTTP/1.1[0m" 404 -
+10.25.134.200 - - [19/Jun/2020 08:40:55] "[33mGET /search?username=test25.testSN25 HTTP/1.1[0m" 404 -
+10.25.134.200 - - [19/Jun/2020 08:41:25] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.134.200 - - [19/Jun/2020 08:41:33] "[37mGET /search?username=test25.testSN25 HTTP/1.1[0m" 200 -
+10.25.134.200 - - [19/Jun/2020 08:41:55] "[37mPOST /updateuser HTTP/1.1[0m" 200 -
+10.25.134.200 - - [19/Jun/2020 08:41:59] "[37mGET /search?username=test25.testSN25 HTTP/1.1[0m" 200 -
+10.25.134.200 - - [19/Jun/2020 08:42:39] "[37mGET /listuser?role=Customer HTTP/1.1[0m" 200 -
+10.25.134.200 - - [19/Jun/2020 09:06:57] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.134.200 - - [19/Jun/2020 09:06:59] "[33mGET /search?username=test25.testSN25 HTTP/1.1[0m" 404 -
+10.25.134.200 - - [19/Jun/2020 09:07:14] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.134.200 - - [19/Jun/2020 09:07:30] "[37mGET /search?username=test25.testSN25 HTTP/1.1[0m" 200 -
+10.25.134.200 - - [19/Jun/2020 09:07:47] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.134.200 - - [19/Jun/2020 09:07:54] "[33mGET /search?username=test25.testSN25 HTTP/1.1[0m" 404 -
+10.25.135.105 - - [19/Jun/2020 10:15:24] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.135.105 - - [19/Jun/2020 10:15:35] "[37mGET /search?username=test25.testSN25 HTTP/1.1[0m" 200 -
+10.25.135.105 - - [19/Jun/2020 10:18:09] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.134.226 - - [19/Jun/2020 10:25:17] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.134.226 - - [19/Jun/2020 10:25:30] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.134.226 - - [19/Jun/2020 10:25:39] "[37mGET /search?username=test25.testSN25 HTTP/1.1[0m" 200 -
+10.25.134.226 - - [19/Jun/2020 10:53:53] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.134.226 - - [19/Jun/2020 10:53:57] "[33mGET /search?username=test25.testSN25 HTTP/1.1[0m" 404 -
+10.25.134.226 - - [19/Jun/2020 11:03:18] "[31m[1mPOST /delete HTTP/1.1[0m" 400 -
+10.25.131.94 - - [19/Jun/2020 12:16:32] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.132.38 - - [22/Jun/2020 12:02:11] "[37mGET /search?username=test25.testSN25 HTTP/1.1[0m" 200 -
+10.25.132.38 - - [22/Jun/2020 12:02:18] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.132.38 - - [22/Jun/2020 12:02:29] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.132.38 - - [22/Jun/2020 12:03:48] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.132.38 - - [22/Jun/2020 12:03:59] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.132.38 - - [22/Jun/2020 12:04:02] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.132.38 - - [22/Jun/2020 12:04:07] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.130.3 - - [23/Jun/2020 04:46:44] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.130.3 - - [23/Jun/2020 04:46:49] "[37mGET /search?username=test25.testSN25 HTTP/1.1[0m" 200 -
+10.25.130.136 - - [25/Jun/2020 05:44:03] "[37mGET /search?username=test25.testSN25 HTTP/1.1[0m" 200 -
+10.25.130.136 - - [25/Jun/2020 05:51:26] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.136 - - [25/Jun/2020 07:09:19] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.136 - - [25/Jun/2020 07:09:33] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.130.136 - - [25/Jun/2020 07:09:41] "[33mGET /search?username=test25.testSN25 HTTP/1.1[0m" 404 -
+10.25.130.85 - - [26/Jun/2020 09:02:14] "[33mGET /search?username=test25.testSN25 HTTP/1.1[0m" 404 -
+10.25.133.125 - - [26/Jun/2020 09:50:23] "[31m[1mPOST /delete HTTP/1.1[0m" 400 -
+10.25.133.125 - - [26/Jun/2020 09:50:32] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.132.132 - - [26/Jun/2020 11:18:47] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.132.132 - - [26/Jun/2020 11:21:28] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.132.132 - - [26/Jun/2020 11:22:17] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.135.89 - - [26/Jun/2020 12:02:24] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.134.75 - - [29/Jun/2020 06:28:15] "[37mGET /search?username=test25.testSN25 HTTP/1.1[0m" 200 -
+10.25.134.75 - - [29/Jun/2020 06:28:22] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.134.114 - - [29/Jun/2020 07:15:00] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.134.114 - - [29/Jun/2020 10:05:16] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.134.114 - - [29/Jun/2020 10:05:49] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.131.5 - - [03/Jul/2020 06:31:40] "[37mGET /search?username=test25.testSN25 HTTP/1.1[0m" 200 -
+10.25.130.53 - - [03/Jul/2020 07:08:17] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.130.53 - - [03/Jul/2020 07:08:20] "[31m[1mPOST /delete HTTP/1.1[0m" 400 -
+10.25.130.53 - - [03/Jul/2020 07:08:25] "[33mGET /search?username=test25.testSN25 HTTP/1.1[0m" 404 -
+10.25.132.182 - - [03/Jul/2020 07:32:42] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.132.182 - - [03/Jul/2020 07:33:16] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.132.182 - - [03/Jul/2020 07:34:00] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.132.182 - - [03/Jul/2020 10:32:31] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.132.182 - - [03/Jul/2020 10:32:38] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.130.126 - - [06/Jul/2020 06:57:38] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.130.126 - - [06/Jul/2020 10:29:54] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.130.126 - - [06/Jul/2020 10:30:04] "[37mGET /search?username=test26 HTTP/1.1[0m" 200 -
+10.25.130.126 - - [06/Jul/2020 11:02:26] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.126 - - [06/Jul/2020 11:02:31] "[31m[1mPOST /delete HTTP/1.1[0m" 400 -
+10.25.130.126 - - [06/Jul/2020 11:02:38] "[37mGET /search?username=test26 HTTP/1.1[0m" 200 -
+10.25.130.126 - - [06/Jul/2020 11:02:43] "[37mGET /search?username=test26 HTTP/1.1[0m" 200 -
+10.25.130.126 - - [06/Jul/2020 11:02:54] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.130.126 - - [06/Jul/2020 11:02:57] "[33mGET /search?username=test26 HTTP/1.1[0m" 404 -
+10.25.130.126 - - [06/Jul/2020 11:07:05] "[33mGET /search?username=test26 HTTP/1.1[0m" 404 -
+10.25.130.126 - - [06/Jul/2020 11:07:08] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.130.126 - - [06/Jul/2020 11:07:13] "[37mGET /search?username=test26 HTTP/1.1[0m" 200 -
+10.25.130.126 - - [06/Jul/2020 11:07:16] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.130.126 - - [06/Jul/2020 11:07:19] "[33mGET /search?username=test26 HTTP/1.1[0m" 404 -
+10.25.130.126 - - [06/Jul/2020 11:07:25] "[33mGET /search?username=test26 HTTP/1.1[0m" 404 -
+10.25.133.242 - - [06/Jul/2020 11:43:34] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.135.54 - - [14/Jul/2020 10:33:10] "[33mGET /search?username=test26 HTTP/1.1[0m" 404 -
+10.25.135.54 - - [14/Jul/2020 10:33:17] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.135.54 - - [14/Jul/2020 10:33:24] "[37mGET /search?username=test26 HTTP/1.1[0m" 200 -
+10.25.135.54 - - [14/Jul/2020 10:33:33] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.132.152 - - [14/Jul/2020 10:59:26] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.132.152 - - [14/Jul/2020 11:18:55] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.132.152 - - [14/Jul/2020 11:18:59] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.132.152 - - [14/Jul/2020 11:32:52] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.132.152 - - [14/Jul/2020 11:32:56] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.132.152 - - [14/Jul/2020 11:32:59] "[33mGET /search?username=test26 HTTP/1.1[0m" 404 -
+10.25.128.77 - - [14/Jul/2020 12:43:57] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.134.253 - - [16/Jul/2020 13:39:34] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.134.253 - - [16/Jul/2020 13:41:08] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.134.253 - - [16/Jul/2020 13:41:33] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.134.253 - - [16/Jul/2020 13:42:57] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.129.126 - - [17/Jul/2020 09:09:21] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.129.126 - - [17/Jul/2020 09:46:17] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.129.126 - - [17/Jul/2020 09:46:22] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.129.126 - - [17/Jul/2020 09:49:15] "[31m[1mPOST /delete HTTP/1.1[0m" 400 -
+10.25.128.146 - - [17/Jul/2020 11:04:30] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [17/Jul/2020 12:04:54] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [17/Jul/2020 12:05:33] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.26.38.197 - - [17/Jul/2020 12:05:55] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [17/Jul/2020 13:08:52] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [17/Jul/2020 13:09:55] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [17/Jul/2020 13:11:52] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [17/Jul/2020 13:12:16] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [17/Jul/2020 13:14:41] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [17/Jul/2020 13:15:14] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.26.38.197 - - [20/Jul/2020 08:14:01] "[37mGET /search?username=apiuser HTTP/1.1[0m" 200 -
+10.25.134.22 - - [27/Jul/2020 07:21:10] "[37mGET /search?username=test26 HTTP/1.1[0m" 200 -
+10.25.129.37 - - [27/Jul/2020 10:24:06] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.129.37 - - [27/Jul/2020 10:24:16] "[37mGET /search?username=test26 HTTP/1.1[0m" 200 -
+10.25.129.37 - - [27/Jul/2020 10:24:24] "[33mPOST /updatepassword HTTP/1.1[0m" 404 -
+10.25.129.37 - - [27/Jul/2020 10:28:58] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.129.37 - - [27/Jul/2020 10:29:03] "[33mGET /search?username=test26 HTTP/1.1[0m" 404 -
+10.25.129.37 - - [27/Jul/2020 10:29:06] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.129.37 - - [27/Jul/2020 10:29:11] "[37mGET /search?username=test26 HTTP/1.1[0m" 200 -
+10.25.129.37 - - [27/Jul/2020 10:29:16] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.129.37 - - [27/Jul/2020 10:29:19] "[33mGET /search?username=test26 HTTP/1.1[0m" 404 -
+10.25.134.215 - - [27/Jul/2020 11:53:13] "[37mPOST /create HTTP/1.1[0m" 201 -
+ * Serving Flask app "central8" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://10.26.38.183:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 317-199-723
+10.25.129.104 - - [28/Jul/2020 04:50:43] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.129.104 - - [28/Jul/2020 04:52:12] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.129.104 - - [28/Jul/2020 04:52:39] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.129.104 - - [28/Jul/2020 04:52:44] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.129.104 - - [28/Jul/2020 04:52:53] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+ * Detected change in '/home/oracle/testflask/code/central8.py', reloading
+{'desc': 'Already exists', 'info': 'Object already exists'}
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 317-199-723
+10.25.133.66 - - [04/Aug/2020 08:38:52] "[35m[1mGET /search?username=test26 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 220, in search
+    responseDict['managerDomainId']= rDictDecoded.pop('managerid')
+KeyError: 'managerid'
+ * Detected change in '/home/oracle/testflask/code/central8.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 317-199-723
+10.25.133.66 - - [04/Aug/2020 08:42:35] "[37mGET /search?username=test26 HTTP/1.1[0m" 200 -
+10.26.38.196 - - [10/Aug/2020 11:10:22] "[33mHEAD / HTTP/1.1[0m" 404 -
+10.26.38.196 - - [11/Aug/2020 06:34:58] "[37mGET /search?username=test26&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IlpqUm1ZVE13TlRKak9XVTVNbUl6TWpnek5ESTNZMkl5TW1JeVkyRXpNamRoWmpWaU1qYzBaZz09In0.eyJhdWQiOiJodHRwOlwvXC9vcmcud3NvMi5hcGltZ3RcL2dhdGV3YXkiLCJzdWIiOiJhZG1pbkBjYXJib24uc3VwZXIiLCJhcHBsaWNhdGlvbiI6eyJvd25lciI6ImFkbWluIiwidGllciI6IlVubGltaXRlZCIsIm5hbWUiOiJEZWZhdWx0QXBwbGljYXRpb24iLCJpZCI6MSwidXVpZCI6bnVsbH0sInNjb3BlIjoiYW1fYXBwbGljYXRpb25fc2NvcGUgZGVmYXVsdCIsImlzcyI6Imh0dHBzOlwvXC93c28yZGV2MS5yaWwuY29tOjk0NDNcL29hdXRoMlwvdG9rZW4iLCJ0aWVySW5mbyI6eyJVbmxpbWl0ZWQiOnsic3RvcE9uUXVvdGFSZWFjaCI6dHJ1ZSwic3Bpa2VBcnJlc3RMaW1pdCI6MCwic3Bpa2VBcnJlc3RVbml0IjpudWxsfX0sImtleXR5cGUiOiJTQU5EQk9YIiwic3Vic2NyaWJlZEFQSXMiOlt7InN1YnNjcmliZXJUZW5hbnREb21haW4iOiJjYXJib24uc3VwZXIiLCJuYW1lIjoiUGl6emFTaGFja0FQSSIsImNvbnRleHQiOiJcL3Bpenphc2hhY2tcLzEuMC4wIiwicHVibGlzaGVyIjoiYWRtaW4iLCJ2ZXJzaW9uIjoiMS4wLjAiLCJzdWJzY3JpcHRpb25UaWVyIjoiVW5saW1pdGVkIn1dLCJjb25zdW1lcktleSI6IlhrYndZU1VLdTBHbVYxMDJaaE5Ha2YzbjlwWWEiLCJleHAiOjE1NzU4NzQyNDYsImlhdCI6MTU3NTg3MDY0NiwianRpIjoiYjlhYzk3ZDEtMDFjZi00MjUyLTg1NjgtNDllMTI0OWY0MGJkIn0.iQYiJOtOSwVrZ9zbBLImgkJn70qzRcPOD2tOgrlTii-qSCbFS8FXUbbEiAQ1LZbIwPWeDHb7JGsl_WR3hOJJaQJRWUjSKg7wdIO69Fju50yHAlhGCxER-PdBYEuoDE8y-FNLzGmZ6Ja6fvz2X5YMmt6nRspHNjnZiu5hFLRsnIRdTN-GaDI9xyzTXJ7NC6wi2wJc4AkvLr3Iyo4H7CK9c-nfoXKoSd-yD12GFWoLqcuKMjXvH5jZgIme_MxeJnL_0MwYCgbKmbOKE53fbB5olTk0XRTCHS978enrtYHj9-PYD0sLnIMxAfX_0ixf4-eYYzs7oaDTSNE1g2RMZr1zOQ HTTP/1.1[0m" 200 -
+10.26.38.196 - - [11/Aug/2020 06:37:41] "[37mGET /search?username=test26 HTTP/1.1[0m" 200 -
+10.26.38.196 - - [11/Aug/2020 07:03:33] "[37mGET /search?username=test26&access_token=059c8998-953a-366b-b055-862a393405ee HTTP/1.1[0m" 200 -
+10.25.135.116 - - [17/Aug/2020 07:30:55] "[31m[1mGET /search?username=test26 HTTP/1.1[0m" 400 -
+10.25.135.116 - - [17/Aug/2020 07:48:42] "[31m[1mGET /search?username=test26 HTTP/1.1[0m" 400 -
+10.25.135.116 - - [17/Aug/2020 08:08:10] "[31m[1mGET /search?username=test26 HTTP/1.1[0m" 400 -
+10.25.135.116 - - [17/Aug/2020 09:30:07] "[31m[1mGET /search?username=test26 HTTP/1.1[0m" 400 -
+10.25.135.116 - - [17/Aug/2020 09:30:18] "[31m[1mGET /search?username=test26 HTTP/1.1[0m" 400 -
+10.25.135.116 - - [17/Aug/2020 09:51:53] "[31m[1mGET /search?username=test26 HTTP/1.1[0m" 400 -
+10.25.135.116 - - [17/Aug/2020 09:51:59] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.135.116 - - [17/Aug/2020 10:02:10] "[31m[1mGET /search?username=test26 HTTP/1.1[0m" 400 -
+10.25.135.116 - - [17/Aug/2020 10:02:13] "[31m[1mGET /search?username=test26 HTTP/1.1[0m" 400 -
+10.25.135.116 - - [17/Aug/2020 10:19:41] "[31m[1mGET /search?username=test26 HTTP/1.1[0m" 400 -
+10.25.135.116 - - [17/Aug/2020 11:05:51] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.135.116 - - [17/Aug/2020 11:21:29] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.135.116 - - [17/Aug/2020 11:21:34] "[31m[1mGET /search?username=test26 HTTP/1.1[0m" 400 -
+10.25.135.116 - - [17/Aug/2020 11:27:09] "[31m[1mGET /search?username=test26 HTTP/1.1[0m" 400 -
+10.25.135.116 - - [17/Aug/2020 11:27:27] "[31m[1mGET /search?username=test26 HTTP/1.1[0m" 400 -
+10.25.135.116 - - [17/Aug/2020 11:30:28] "[31m[1mGET /search?username=test26 HTTP/1.1[0m" 400 -
+10.25.135.116 - - [17/Aug/2020 11:30:31] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.135.116 - - [17/Aug/2020 11:30:38] "[31m[1mGET /search?username=test26 HTTP/1.1[0m" 400 -
+10.25.135.116 - - [17/Aug/2020 11:30:41] "[35m[1mPOST /delete HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/central8.py", line 123, in delete
+    con.simple_bind_s(request.authorization["username"],request.authorization["password"])
+  File "/home/oracle/testflask/lib/python3.6/site-packages/ldap/ldapobject.py", line 445, in simple_bind_s
+    msgid = self.simple_bind(who,cred,serverctrls,clientctrls)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/ldap/ldapobject.py", line 439, in simple_bind
+    return self._ldap_call(self._l.simple_bind,who,cred,RequestControlTuples(serverctrls),RequestControlTuples(clientctrls))
+  File "/home/oracle/testflask/lib/python3.6/site-packages/ldap/ldapobject.py", line 331, in _ldap_call
+    reraise(exc_type, exc_value, exc_traceback)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/ldap/compat.py", line 44, in reraise
+    raise exc_value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/ldap/ldapobject.py", line 315, in _ldap_call
+    result = func(*args,**kwargs)
+ldap.SERVER_DOWN: {'desc': "Can't contact LDAP server", 'errno': 32, 'info': 'Broken pipe'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 153, in delete
+    rValue= "Error while deleting user " + "'"+ data['username'] + "': " + mssg
+UnboundLocalError: local variable 'data' referenced before assignment
+10.25.135.116 - - [17/Aug/2020 11:31:13] "[31m[1mPOST /updatepassword HTTP/1.1[0m" 400 -
+10.25.135.116 - - [17/Aug/2020 11:31:22] "[31m[1mPOST /updateuser HTTP/1.1[0m" 400 -
+ * Serving Flask app "central8" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://10.26.38.183:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 317-199-723
+10.25.135.116 - - [17/Aug/2020 11:48:28] "[37mGET /search?username=test26 HTTP/1.1[0m" 200 -
+10.25.135.116 - - [17/Aug/2020 11:48:43] "[37mGET /search?username=test26 HTTP/1.1[0m" 200 -
+10.25.135.116 - - [17/Aug/2020 11:48:44] "[37mGET /search?username=test26 HTTP/1.1[0m" 200 -
+10.25.135.116 - - [17/Aug/2020 11:48:51] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.135.116 - - [17/Aug/2020 11:49:00] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.135.116 - - [17/Aug/2020 12:15:00] "[37mGET /search?username=test26 HTTP/1.1[0m" 200 -
+{'desc': 'Already exists', 'info': 'Object already exists'}
+Traceback (most recent call last):
+  File "central8.py", line 1, in <module>
+    from flask import Flask,request,Response,json
+ImportError: No module named flask
+Traceback (most recent call last):
+  File "central8.py", line 1, in <module>
+    from flask import Flask,request,Response,json
+ImportError: No module named flask
+Traceback (most recent call last):
+  File "central8.py", line 1, in <module>
+    from flask import Flask,request,Response,json
+ImportError: No module named flask
+Traceback (most recent call last):
+  File "central8.py", line 1, in <module>
+    from flask import Flask,request,Response,json
+ImportError: No module named flask
+Traceback (most recent call last):
+  File "central8.py", line 1, in <module>
+    from flask import Flask,request,Response,json
+ImportError: No module named flask
+Traceback (most recent call last):
+  File "central8.py", line 2, in <module>
+    import ldap,jsonify
+ModuleNotFoundError: No module named 'ldap'
+Traceback (most recent call last):
+  File "central8.py", line 2, in <module>
+    import ldap,jsonify
+ModuleNotFoundError: No module named 'jsonify'
+ * Serving Flask app "central8" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://10.26.38.183:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 231-022-371
+10.25.135.254 - - [19/Aug/2020 12:24:34] "[37mGET /search?username=test26 HTTP/1.1[0m" 200 -
+10.26.38.196 - - [19/Aug/2020 12:46:48] "[35m[1mPOST /create HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 77, in create
+    "title":data["fullname"],"description":data["role"],"managerid":data['managerDomainId'],
+KeyError: 'managerDomainId'
+10.26.38.196 - - [19/Aug/2020 12:47:27] "[35m[1mPOST /create HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 77, in create
+    "title":data["fullname"],"description":data["role"],"managerid":data['managerDomainId'],
+KeyError: 'managerDomainId'
+10.26.38.196 - - [19/Aug/2020 13:22:19] "[37mGET /search?username=test26 HTTP/1.1[0m" 200 -
+10.25.135.254 - - [19/Aug/2020 13:27:01] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.135.254 - - [19/Aug/2020 13:27:04] "[33mGET /search?username=test26 HTTP/1.1[0m" 404 -
+10.26.38.196 - - [19/Aug/2020 13:27:36] "[35m[1mPOST /create HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 77, in create
+    "title":data["fullname"],"description":data["role"],"managerid":data['managerDomainId'],
+KeyError: 'managerDomainId'
+10.25.135.254 - - [19/Aug/2020 13:29:24] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.135.254 - - [19/Aug/2020 13:29:29] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.135.254 - - [19/Aug/2020 13:29:40] "[35m[1mPOST /create HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 77, in create
+    "title":data["fullname"],"description":data["role"],"managerid":data['managerDomainId'],
+KeyError: 'managerDomainId'
+ * Detected change in '/home/oracle/testflask/code/central8.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 231-022-371
+10.25.135.254 - - [19/Aug/2020 13:39:38] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.135.254 - - [19/Aug/2020 13:39:43] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.135.254 - - [19/Aug/2020 13:39:54] "[33mGET /search?username=test26 HTTP/1.1[0m" 404 -
+10.25.135.254 - - [19/Aug/2020 13:39:58] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.135.254 - - [19/Aug/2020 13:40:01] "[37mGET /search?username=test26 HTTP/1.1[0m" 200 -
+10.25.135.254 - - [19/Aug/2020 13:40:16] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.135.254 - - [19/Aug/2020 13:40:39] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.135.254 - - [19/Aug/2020 13:40:49] "[37mGET /search?username=test26 HTTP/1.1[0m" 200 -
+10.26.38.196 - - [19/Aug/2020 13:41:43] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.196 - - [19/Aug/2020 13:41:58] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.38.197 - - [20/Aug/2020 09:44:35] "[37mGET /search?username=test26 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [20/Aug/2020 09:46:16] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.38.197 - - [20/Aug/2020 09:46:24] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.61.50 - - [20/Aug/2020 10:42:28] "[35m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 172, in search
+    con.simple_bind_s(request.authorization["username"],request.authorization["password"])
+TypeError: 'NoneType' object is not subscriptable
+10.26.61.50 - - [20/Aug/2020 10:52:28] "[35m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 172, in search
+    con.simple_bind_s(request.authorization["username"],request.authorization["password"])
+TypeError: 'NoneType' object is not subscriptable
+10.26.61.50 - - [20/Aug/2020 10:52:51] "[35m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 172, in search
+    con.simple_bind_s(request.authorization["username"],request.authorization["password"])
+TypeError: 'NoneType' object is not subscriptable
+10.26.61.50 - - [20/Aug/2020 10:56:35] "[35m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 172, in search
+    con.simple_bind_s(request.authorization["username"],request.authorization["password"])
+TypeError: 'NoneType' object is not subscriptable
+10.26.61.50 - - [20/Aug/2020 10:57:36] "[35m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 172, in search
+    con.simple_bind_s(request.authorization["username"],request.authorization["password"])
+TypeError: 'NoneType' object is not subscriptable
+10.26.61.50 - - [20/Aug/2020 11:21:27] "[35m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 172, in search
+    con.simple_bind_s(request.authorization["username"],request.authorization["password"])
+TypeError: 'NoneType' object is not subscriptable
+10.26.61.50 - - [20/Aug/2020 11:31:22] "[35m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 172, in search
+    con.simple_bind_s(request.authorization["username"],request.authorization["password"])
+TypeError: 'NoneType' object is not subscriptable
+10.26.61.50 - - [20/Aug/2020 11:31:41] "[35m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 172, in search
+    con.simple_bind_s(request.authorization["username"],request.authorization["password"])
+TypeError: 'NoneType' object is not subscriptable
+10.26.61.50 - - [20/Aug/2020 11:31:43] "[35m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 172, in search
+    con.simple_bind_s(request.authorization["username"],request.authorization["password"])
+TypeError: 'NoneType' object is not subscriptable
+10.26.61.50 - - [20/Aug/2020 11:31:44] "[35m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 172, in search
+    con.simple_bind_s(request.authorization["username"],request.authorization["password"])
+TypeError: 'NoneType' object is not subscriptable
+10.26.61.50 - - [20/Aug/2020 11:31:47] "[35m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 172, in search
+    con.simple_bind_s(request.authorization["username"],request.authorization["password"])
+TypeError: 'NoneType' object is not subscriptable
+10.26.61.50 - - [20/Aug/2020 11:37:24] "[35m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 172, in search
+    con.simple_bind_s(request.authorization["username"],request.authorization["password"])
+TypeError: 'NoneType' object is not subscriptable
+10.26.61.50 - - [20/Aug/2020 11:56:28] "[35m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 172, in search
+    con.simple_bind_s(request.authorization["username"],request.authorization["password"])
+TypeError: 'NoneType' object is not subscriptable
+10.26.38.197 - - [20/Aug/2020 12:31:36] "[37mGET /search?username=test26&access_token=62b709b6-cf27-3b85-a563-cfe7a72bb405 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [20/Aug/2020 12:33:05] "[37mGET /search?username=test26&access_token=62b709b6-cf27-3b85-a563-cfe7a72bb405 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [20/Aug/2020 12:33:14] "[37mGET /search?username=test26&access_token=62b709b6-cf27-3b85-a563-cfe7a72bb405 HTTP/1.1[0m" 200 -
+10.26.61.50 - - [20/Aug/2020 12:40:32] "[35m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 172, in search
+    con.simple_bind_s(request.authorization["username"],request.authorization["password"])
+TypeError: 'NoneType' object is not subscriptable
+10.26.61.50 - - [20/Aug/2020 12:46:27] "[35m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 172, in search
+    con.simple_bind_s(request.authorization["username"],request.authorization["password"])
+TypeError: 'NoneType' object is not subscriptable
+10.26.61.50 - - [20/Aug/2020 12:47:29] "[35m[1mGET /listuser?role=Customer HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 472, in listuser
+    con.simple_bind_s(request.authorization["username"],request.authorization["password"])
+TypeError: 'NoneType' object is not subscriptable
+10.26.61.50 - - [20/Aug/2020 12:49:33] "[33mHEAD / HTTP/1.1[0m" 404 -
+10.26.61.21 - - [20/Aug/2020 12:50:54] code 400, message Bad request syntax ('ÿôÿý\x06ÿôÿý\x06ÿôÿý\x06ÿôÿý\x06ÿôÿý\x06\x1b\x1b\x1b\x1b\x1b')
+10.26.61.21 - - [20/Aug/2020 12:50:54] "[35m[1mÿôÿýÿôÿýÿôÿýÿôÿýÿôÿý[0m" HTTPStatus.BAD_REQUEST -
+10.26.38.197 - - [20/Aug/2020 12:56:07] "[37mGET /search?username=test24.testSN24 HTTP/1.1[0m" 200 -
+10.26.61.50 - - [20/Aug/2020 12:57:59] "[35m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 172, in search
+    con.simple_bind_s(request.authorization["username"],request.authorization["password"])
+TypeError: 'NoneType' object is not subscriptable
+10.26.61.50 - - [20/Aug/2020 13:01:21] "[33mHEAD / HTTP/1.1[0m" 404 -
+10.26.38.197 - - [20/Aug/2020 13:01:24] "[33mHEAD / HTTP/1.1[0m" 404 -
+10.26.61.21 - - [20/Aug/2020 13:01:46] code 400, message Bad request syntax ('\x1b')
+10.26.61.21 - - [20/Aug/2020 13:01:46] "[35m[1m[0m" HTTPStatus.BAD_REQUEST -
+10.26.38.197 - - [20/Aug/2020 13:04:09] "[37mGET /search?username=test24.testSN24 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [20/Aug/2020 13:04:16] "[33mGET /search?username=test24.testSN24sdcnsdknjksdn HTTP/1.1[0m" 404 -
+10.26.38.197 - - [20/Aug/2020 13:04:21] "[37mGET /search?username=test24.testSN24 HTTP/1.1[0m" 200 -
+10.26.38.197 - - [20/Aug/2020 13:04:37] "[33mGET /search?username=test24.testSN24ksdbcksdbc HTTP/1.1[0m" 404 -
+10.26.38.197 - - [20/Aug/2020 13:04:43] "[37mGET /search?username=test24.testSN24 HTTP/1.1[0m" 200 -
+10.26.61.50 - - [20/Aug/2020 13:05:05] "[35m[1mGET /search?username=test24.testSN24sdjkcbjsdbcksdbc HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 172, in search
+    con.simple_bind_s(request.authorization["username"],request.authorization["password"])
+TypeError: 'NoneType' object is not subscriptable
+10.26.61.50 - - [20/Aug/2020 13:05:21] "[35m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oracle/testflask/code/oidvenv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/oracle/testflask/code/central8.py", line 172, in search
+    con.simple_bind_s(request.authorization["username"],request.authorization["password"])
+TypeError: 'NoneType' object is not subscriptable
+10.26.38.197 - - [20/Aug/2020 13:13:09] "[33mHEAD / HTTP/1.1[0m" 404 -
+10.26.61.50 - - [20/Aug/2020 13:20:31] "[37mGET /search?username=test24.testSN24 HTTP/1.1[0m" 200 -
+10.26.61.50 - - [21/Aug/2020 08:41:19] "[37mGET /search?username=test24.testSN24 HTTP/1.1[0m" 200 -
+10.26.61.50 - - [21/Aug/2020 08:43:21] "[37mGET /search?username=test24.testSN24 HTTP/1.1[0m" 200 -
+10.26.61.50 - - [25/Aug/2020 11:07:05] "[37mGET /search?username=test24.testSN24 HTTP/1.1[0m" 200 -
+10.26.61.50 - - [27/Aug/2020 04:34:52] "[31m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 400 -
+10.26.61.50 - - [27/Aug/2020 04:35:09] "[31m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 400 -
+10.26.61.50 - - [27/Aug/2020 04:35:11] "[31m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 400 -
+10.26.61.50 - - [27/Aug/2020 04:35:13] "[31m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 400 -
+10.26.61.50 - - [27/Aug/2020 04:35:18] "[31m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 400 -
+10.26.61.50 - - [27/Aug/2020 04:35:58] "[31m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 400 -
+10.26.61.50 - - [27/Aug/2020 04:36:06] "[31m[1mGET /search?username=test24.testSN24 HTTP/1.1[0m" 400 -
+10.26.61.50 - - [27/Aug/2020 04:41:00] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.202 - - [27/Aug/2020 04:46:02] "[31m[1mGET /search?username=test26 HTTP/1.1[0m" 400 -
+10.25.130.202 - - [27/Aug/2020 04:51:57] "[31m[1mGET /search?username=test26 HTTP/1.1[0m" 400 -
+10.25.130.202 - - [27/Aug/2020 04:52:04] "[31m[1mGET /search?username=test26 HTTP/1.1[0m" 400 -
+ * Serving Flask app "central8" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://10.26.38.183:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 231-022-371
+10.25.130.202 - - [27/Aug/2020 04:53:52] "[37mGET /search?username=test26 HTTP/1.1[0m" 200 -
+10.25.130.202 - - [27/Aug/2020 04:54:14] "[37mGET /search?username=test26 HTTP/1.1[0m" 200 -
+10.26.61.50 - - [27/Aug/2020 04:54:57] "[37mGET /search?username=test24.testSN24 HTTP/1.1[0m" 200 -
+10.26.61.50 - - [27/Aug/2020 04:59:52] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.61.50 - - [27/Aug/2020 05:00:19] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.61.50 - - [27/Aug/2020 05:01:21] "[37mGET /search?username=test24.testSN24 HTTP/1.1[0m" 200 -
+10.26.61.50 - - [27/Aug/2020 05:01:39] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.61.50 - - [27/Aug/2020 05:01:42] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.61.50 - - [27/Aug/2020 05:01:51] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.61.50 - - [27/Aug/2020 05:05:48] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.61.50 - - [27/Aug/2020 05:15:00] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.61.50 - - [27/Aug/2020 05:15:37] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.61.50 - - [27/Aug/2020 05:16:03] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.61.50 - - [27/Aug/2020 05:16:09] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.61.50 - - [27/Aug/2020 05:17:44] "[37mGET /search?username=test24.testSN24 HTTP/1.1[0m" 200 -
+10.26.61.50 - - [27/Aug/2020 05:35:15] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.202 - - [27/Aug/2020 05:37:09] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.61.50 - - [27/Aug/2020 05:39:50] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.202 - - [27/Aug/2020 05:43:19] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.202 - - [27/Aug/2020 05:45:25] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.202 - - [27/Aug/2020 05:45:46] "[33mGET /search?username=0000010005 HTTP/1.1[0m" 404 -
+10.25.130.202 - - [27/Aug/2020 05:46:40] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.130.202 - - [27/Aug/2020 05:55:32] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.130.202 - - [27/Aug/2020 05:55:52] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.202 - - [27/Aug/2020 05:55:56] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.202 - - [27/Aug/2020 05:56:01] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.202 - - [27/Aug/2020 05:56:08] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.61.50 - - [27/Aug/2020 05:56:13] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.202 - - [27/Aug/2020 05:56:17] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.202 - - [27/Aug/2020 05:56:22] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.202 - - [27/Aug/2020 05:56:29] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.202 - - [27/Aug/2020 05:58:18] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.202 - - [27/Aug/2020 05:58:24] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.202 - - [27/Aug/2020 05:58:29] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.202 - - [27/Aug/2020 05:58:33] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.202 - - [27/Aug/2020 05:58:40] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.130.202 - - [27/Aug/2020 05:58:44] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.130.202 - - [27/Aug/2020 05:59:08] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.130.202 - - [27/Aug/2020 05:59:14] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.130.202 - - [27/Aug/2020 05:59:19] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.130.202 - - [27/Aug/2020 05:59:35] "[33mGET /search?username=0000010005 HTTP/1.1[0m" 404 -
+10.25.130.202 - - [27/Aug/2020 06:00:11] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.26.61.50 - - [27/Aug/2020 06:03:47] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.61.50 - - [27/Aug/2020 06:08:35] "[37mGET /search?username=0000010005 HTTP/1.1[0m" 200 -
+10.25.130.202 - - [27/Aug/2020 10:14:49] "[37mGET /search?username=0000010005 HTTP/1.1[0m" 200 -
+10.26.61.50 - - [27/Aug/2020 10:54:29] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.61.50 - - [27/Aug/2020 10:54:42] "[37mGET /search?username=0000010005 HTTP/1.1[0m" 200 -
+10.26.61.50 - - [27/Aug/2020 10:54:52] "[37mGET /search?username=2000118814 HTTP/1.1[0m" 200 -
+10.26.61.50 - - [27/Aug/2020 10:57:55] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.61.50 - - [27/Aug/2020 10:59:16] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.26.61.50 - - [27/Aug/2020 11:08:54] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.134.66 - - [31/Aug/2020 05:30:17] "[31m[1mGET /search?username=0000010005 HTTP/1.1[0m" 400 -
+10.25.134.66 - - [31/Aug/2020 12:35:12] "[31m[1mGET /search?username=0000010005 HTTP/1.1[0m" 400 -
+10.25.135.206 - - [04/Sep/2020 07:38:14] "[31m[1mGET /search?username=0000010005 HTTP/1.1[0m" 400 -
+10.25.130.221 - - [14/Sep/2020 09:17:28] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+Traceback (most recent call last):
+  File "central8.py", line 1, in <module>
+    from flask import Flask,request,Response,json
+ImportError: No module named flask
+ * Serving Flask app "central8" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://10.26.38.183:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 231-022-371
+10.25.128.40 - - [22/Sep/2020 06:19:15] "[33mGET /search?username=0000010005 HTTP/1.1[0m" 404 -
+10.25.128.40 - - [22/Sep/2020 06:19:29] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.128.40 - - [22/Sep/2020 06:20:42] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.128.40 - - [22/Sep/2020 06:21:01] "[37mGET /search?username=TestUser24 HTTP/1.1[0m" 200 -
+10.25.128.40 - - [22/Sep/2020 08:54:24] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.128.40 - - [22/Sep/2020 08:54:41] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.128.40 - - [22/Sep/2020 08:54:48] "[33mGET /search?username=TestUser24 HTTP/1.1[0m" 404 -
+10.25.128.40 - - [22/Sep/2020 08:55:06] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.128.40 - - [22/Sep/2020 08:55:10] "[37mGET /search?username=TestUser24 HTTP/1.1[0m" 200 -
+10.25.134.129 - - [22/Sep/2020 09:51:59] "[37mGET /search?username=TestUser24 HTTP/1.1[0m" 200 -
+10.25.134.129 - - [22/Sep/2020 09:52:02] "[37mPOST /delete HTTP/1.1[0m" 204 -
+10.25.134.129 - - [22/Sep/2020 09:52:06] "[33mGET /search?username=TestUser24 HTTP/1.1[0m" 404 -
+10.25.133.130 - - [22/Sep/2020 10:52:15] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.133.130 - - [22/Sep/2020 10:52:35] "[37mGET /search?username=TestUser24 HTTP/1.1[0m" 200 -
+ * Serving Flask app "central8" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://10.26.38.183:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 231-022-371
+10.25.129.193 - - [26/Sep/2020 11:18:29] "[31m[1mGET /search?username=TestUser24 HTTP/1.1[0m" 400 -
+10.25.128.163 - - [29/Sep/2020 11:22:25] "[31m[1mGET /search?username=TestUser24 HTTP/1.1[0m" 400 -
+10.25.128.163 - - [29/Sep/2020 11:23:30] "[31m[1mGET /search?username=TestUser24 HTTP/1.1[0m" 400 -
+10.25.128.163 - - [29/Sep/2020 11:23:44] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+ * Detected change in '/home/oracle/testflask/code/central8.py', reloading
+{'result': -1, 'desc': "Can't contact LDAP server", 'errno': 107, 'ctrls': [], 'info': 'Transport endpoint is not connected'}
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 231-022-371
+10.25.128.163 - - [29/Sep/2020 11:26:02] "[33mGET /search?username=TestUser24 HTTP/1.1[0m" 404 -
+10.25.128.163 - - [29/Sep/2020 11:26:09] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.128.163 - - [29/Sep/2020 12:12:38] "[31m[1mPOST /create HTTP/1.1[0m" 400 -
+10.25.128.163 - - [29/Sep/2020 12:12:47] "[37mPOST /create HTTP/1.1[0m" 201 -
+10.25.132.41 - - [03/Oct/2020 06:04:14] "[37mGET /search?username=TestUser24 HTTP/1.1[0m" 200 -
+10.25.132.41 - - [03/Oct/2020 06:06:25] "[37mPOST /create HTTP/1.1[0m" 201 -
+ * Detected change in '/home/oracle/testflask/code/central8.py', reloading
+{'msgtype': 105, 'msgid': 8, 'result': 68, 'desc': 'Already exists', 'ctrls': [], 'info': 'Object already exists'}
+ * Restarting with stat
+  File "/home/oracle/testflask/code/central8.py", line 88
+    parsed_entry=[(i,bytes(j,encoding='utf-8'))for i,j in entry.items()]
+               ^
+IndentationError: expected an indented block
